@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './app.css';
+import "./app.sass";
 
 function component () {
   var element = document.createElement('div');

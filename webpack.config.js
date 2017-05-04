@@ -21,13 +21,24 @@ module.exports = {
           use: 'css-loader'
         })
       },
-      // {
-      //   test: /\.scss/,
-      //   use: "sass-loader",
-      //   options: {
-      //     includePaths: [require('vital-css').includePaths]
-      //   }
-      // }
+      {
+        test: /\.sass/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [require('vital-css').includePaths]
+              }
+            }
+          ]
+        })
+      }
     ]
   },
   plugins: [
