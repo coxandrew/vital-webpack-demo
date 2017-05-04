@@ -1,37 +1,24 @@
 let path = require('path');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+const resolvePath = relativePath => path.resolve(__dirname, relativePath);
 
-module.exports = [{
+module.exports = {
   name: 'js',
-  entry: './app/index.js',
+  entry: './src',
   output: {
-    filename: 'application.js',
-    path: path.resolve(__dirname, 'dist')
-  }
-}, {
-  name: 'css',
-  entry: {
-    styles: [
-      path.resolve(__dirname, 'app/style.scss')
-    ]
-  },
-  output: {
-    filename: 'application.css',
-    path: path.resolve(__dirname, 'dist')
+    path: resolvePath('build'),
+    filename: 'bundle.js'
   },
   module: {
-    rules: [{
-      test: /\.(sass|scss)$/,
-      use: [{
-        loader: "css-loader" // translates CSS into CommonJS
-      }, {
-        loader: "sass-loader", // compiles Sass to CSS
-        options: {
-          includePaths: [require('vital-css').includePaths]
-        }
-      }]
-    }]
+    loaders: [
+      {
+        test: /\.css/,
+        loaders: ['style', 'css'],
+        include: __dirname + '/src'
+      }
+    ]
   }
-}];
+};
 
   // module: {
   //   rules: [{
@@ -58,3 +45,16 @@ module.exports = [{
   //   }]
   // },
   //
+
+
+//     rules: [{
+//       test: /\.(sass|scss)$/,
+//       use: [{
+//         loader: "css-loader" // translates CSS into CommonJS
+//       }, {
+//         loader: "sass-loader", // compiles Sass to CSS
+//         options: {
+//           includePaths: [require('vital-css').includePaths]
+//         }
+//       }]
+//     }]

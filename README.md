@@ -1,11 +1,31 @@
 ## Installation
 
+Install webpack (we'll do this globally for easy access to the `webpack` script on the commandline):
+
 ```
-$ npm install css-loader sass-loader node-sass webpack --save-dev
+$ npm install webpack -g
+```
+
+Install Babel modules:
+
+```
+$ npm install --save-dev babel-loader babel-core babel-preset-es2015
+```
+
+Install CSS
+
+```
+$ npm install --save-dev css-loader sass-loader node-sass
 ```
 
 ## Build
 
 ```
-$ ./node_modules/.bin/webpack --config webpack.config.js
+$ webpack --config webpack.config.js
+```
+
+## Run
+
+```
+$ npm run
 ```
