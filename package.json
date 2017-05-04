@@ -1,19 +1,22 @@
 {
-  "name": "webpack-demo",
+  "name": "vital-webpack-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "connect": "^3.6.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
+    "server-static": "^2.0.0",
     "vital-css": "^2.1.0",
     "webpack": "^2.5.0"
   },
