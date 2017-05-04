@@ -15,7 +15,7 @@ $ npm install --save-dev babel-loader babel-core babel-preset-es2015
 Install CSS
 
 ```
-$ npm install --save-dev css-loader sass-loader node-sass
+$ npm install --save-dev css-loader sass-loader node-sass extract-text-webpack-plugin
 ```
 
 ## Build
