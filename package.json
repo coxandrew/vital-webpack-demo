@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "serve"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
+    "serve": "^5.1.4",
     "server-static": "^2.0.0",
     "style-loader": "^0.17.0",
     "vital-css": "^2.1.0",

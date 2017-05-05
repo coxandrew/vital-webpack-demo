@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import "./app.sass";
 
-function component () {
+function component() {
   var element = document.createElement('div');
 
   /* lodash is required for the next line to work */

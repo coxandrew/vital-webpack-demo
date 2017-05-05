@@ -16,12 +16,6 @@ module.exports = {
         include: resolvePath('src')
       },
       {
-        test: /\.css/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader'
-        })
-      },
-      {
         test: /\.sass/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
